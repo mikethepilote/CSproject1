@@ -1,0 +1,16 @@
+import java.util.Scanner;//importing Scanner for user input
+public class Main {
+    public static void main(String[]args) {
+        Scanner scanner=new Scanner(System.in);//creating a new Scanner to read user input from System.in (keyboard)
+        System.out.println("Enter the number of values you want to average:");//asking the user for the number of values they want to average
+        int count=scanner.nextInt();//reading integer value from user and storing it in variable 'count'
+        int sum=0;//creating integer 'sum' to keep track of the sum of values entered by the user
+        System.out.println("Enter the values one by one:");//asking the user for the values they want to average
+        for(int i=0;i<count;i++){//creating loop that will continue until 'count' has been reached.
+            int value=scanner.nextInt();//reading integer value from user and storing it into 'value'
+            sum+=value;//adds 'value' into 'sum'
+        }
+        int average=sum/count;//calculating average by dividing 'sum' with 'count'
+        System.out.println("The average of the values you entered (with decimals rounded down) is: "+average);//prints out the average
+    }
+}
